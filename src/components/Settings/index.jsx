@@ -10,13 +10,11 @@ const Settings = () => {
         classes={classes}
         value={"Restart"}
         background="#3F3F3F"
-        hover={"#BEBEBE"}
       />
       <ButtonSetts
         classes={classes}
         background="#BEBEBE"
         value={"Menu"}
-        hover={"#3F3F3F"}
       />
     </Grid>
   );
