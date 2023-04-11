@@ -82,7 +82,7 @@ const Home = () => {
               "&:hover": { background: "grey", opacity: "0.8" },
             }}
           >
-            Enviar
+            Play
           </Button>
         </Grid>
       </form>
