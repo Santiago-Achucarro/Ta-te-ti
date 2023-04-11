@@ -1,6 +1,16 @@
 import { Grid } from "@mui/material";
+import { useContext, useEffect, useState } from "react";
+import { turnContext } from "../../custom/turnContext";
 
-const GridTemplate = ({ index, classes, value }) => {
+const GridTemplate = ({ index, classes }) => {
+  const { gameState, handleClick } = useContext(turnContext);
+
+  const [value, setValue] = useState(gameState[index]);
+
+  useEffect(() => {
+    setValue(gameState[index]);
+  }, [gameState, index]);
+
   return (
     <Grid
       item
@@ -14,6 +24,7 @@ const GridTemplate = ({ index, classes, value }) => {
         borderBottomLeftRadius: index === 6 ? "5px" : "0px",
         borderBottomRightRadius: index === 8 ? "5px" : "0px",
       }}
+      onClick={() => handleClick(index)}
     >
       {value}
     </Grid>
